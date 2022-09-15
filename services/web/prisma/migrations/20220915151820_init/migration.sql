@@ -1,3 +1,6 @@
+-- Extensions
+create extension if not exists "uuid-ossp";
+
 -- CreateTable
 CREATE TABLE "jobs" (
     "id" UUID NOT NULL DEFAULT uuid_generate_v4(),

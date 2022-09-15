@@ -14,13 +14,6 @@ services:
       PGADMIN_CONFIG_SERVER_MODE: "False"
       PGADMIN_CONFIG_MASTER_PASSWORD_REQUIRED: "False"
       PGADMIN_DISABLE_POSTFIX: "1"
-    networks:
-      - supabase
 
 volumes:
-  pgdata:
   pgadmin:
-
-networks:
-  supabase:
-    name: supabase_default

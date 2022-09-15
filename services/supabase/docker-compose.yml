@@ -154,18 +154,26 @@ services:
     image: supabase/postgres:14.1.0.21
     command: postgres -c config_file=/etc/postgresql/postgresql.conf
     restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
     ports:
       - ${POSTGRES_PORT}:5432
     environment:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     volumes:
-      - ./volumes/db/data:/var/lib/postgresql/data
+      - supabasepgdata:/var/lib/postgresql/data
       - ./volumes/db/init:/docker-entrypoint-initdb.d
 
   mail:
     container_name: supabase-mail
     image: inbucket/inbucket:stable
     ports:
-      - '2500:2500' # SMTP
-      - '9000:9000' # web interface
-      - '1100:1100' # POP3
+      - "2500:2500" # SMTP
+      - "9000:9000" # web interface
+      - "1100:1100" # POP3
+
+volumes:
+  supabasepgdata:
