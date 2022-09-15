@@ -1,0 +1,21 @@
+# MacOS
+.DS_Store
+
+# Dir Env
+.direnv
+
+# Logs
+*.log
+
+# Node
+build
+out
+node_modules
+.next
+.pnp
+.pnp.js
+.swc
+*.tsbuildinfo
+
+# Node Coverage
+coverage

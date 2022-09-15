@@ -1,0 +1,26 @@
+version: "3.9"
+
+services:
+  pgadmin:
+    container_name: pgadmin
+    build: .
+    ports:
+      - "5050:80"
+    volumes:
+      - pgadmin:/var/lib/pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "pgadmin@pgadmin.com"
+      PGADMIN_DEFAULT_PASSWORD: "password"
+      PGADMIN_CONFIG_SERVER_MODE: "False"
+      PGADMIN_CONFIG_MASTER_PASSWORD_REQUIRED: "False"
+      PGADMIN_DISABLE_POSTFIX: "1"
+    networks:
+      - supabase
+
+volumes:
+  pgdata:
+  pgadmin:
+
+networks:
+  supabase:
+    name: supabase_default

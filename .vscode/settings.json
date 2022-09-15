@@ -1,0 +1,31 @@
+{
+  "editor.formatOnSave": true,
+  "editor.inlayHints.enabled": "offUnlessPressed",
+
+  "files.eol": "\n",
+
+  // brettm12345.nixfmt-vscode
+  "[nix]": {
+    "editor.defaultFormatter": "brettm12345.nixfmt-vscode"
+  },
+
+  // jnoortheen.nix-ide
+  "nix.enableLanguageServer": true,
+  "nix.serverPath": "rnix-lsp",
+  "nixfmt.path": "nixpkgs-fmt",
+
+  // esbenp.prettier-vscode
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.useEditorConfig": true,
+
+  // dbaeumer.vscode-eslint
+  "eslint.run": "onSave",
+
+  // bradlc.vscode-tailwindcss
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "files.associations": {
+    "*.css": "tailwindcss"
+  }
+}

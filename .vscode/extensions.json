@@ -1,0 +1,22 @@
+{
+  "recommendations": [
+    "editorconfig.editorconfig",
+
+    // Nix
+    "mkhl.direnv",
+    "jnoortheen.nix-ide",
+    "brettm12345.nixfmt-vscode",
+
+    // Docker
+    "ms-azuretools.vscode-docker",
+    "ms-vscode-remote.remote-containers",
+
+    // Node
+    "ms-vscode.vscode-typescript-next",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "bradlc.vscode-tailwindcss",
+    "csstools.postcss",
+    "jock.svg"
+  ]
+}
