@@ -2,8 +2,9 @@ lockfileVersion: 5.4
 
 specifiers:
   '@hookform/resolvers': ^2.9.8
-  '@supabase/auth-helpers-nextjs': ^0.2.7
-  '@supabase/auth-helpers-react': ^0.2.3
+  '@prisma/client': ^4.3.1
+  '@supabase/auth-helpers-nextjs': ^0.2.8
+  '@supabase/auth-helpers-react': ^0.2.4
   '@supabase/supabase-js': ^1.35.6
   '@types/node': 18.7.18
   '@types/react': 18.0.20
@@ -19,6 +20,7 @@ specifiers:
   postcss: ^8.4.16
   prettier: ^2.7.1
   prettier-plugin-tailwindcss: ^0.1.13
+  prisma: ^4.3.1
   react: 18.2.0
   react-dom: 18.2.0
   react-hook-form: ^7.35.0
@@ -29,8 +31,9 @@ specifiers:
 
 dependencies:
   '@hookform/resolvers': 2.9.8_react-hook-form@7.35.0
-  '@supabase/auth-helpers-nextjs': 0.2.7
-  '@supabase/auth-helpers-react': 0.2.3
+  '@prisma/client': 4.3.1_prisma@4.3.1
+  '@supabase/auth-helpers-nextjs': 0.2.8
+  '@supabase/auth-helpers-react': 0.2.4
   '@supabase/supabase-js': 1.35.6
   axios: 0.27.2
   daisyui: 2.27.0_6b4luod745iryv24jvdbvzbbsa
@@ -53,6 +56,7 @@ devDependencies:
   postcss: 8.4.16
   prettier: 2.7.1
   prettier-plugin-tailwindcss: 0.1.13_prettier@2.7.1
+  prisma: 4.3.1
   tailwindcss: 3.1.8
   typescript: 4.8.3
 
@@ -266,24 +270,47 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.13.0
 
+  /@prisma/client/4.3.1_prisma@4.3.1:
+    resolution: {integrity: sha512-FA0/d1VMJNWqzU7WVWTNWJ+lGOLR9JUBnF73GdIPAEVo/6dWk4gHx0EmgeU+SMv4MZoxgOeTBJF2azhg7x0hMw==}
+    engines: {node: '>=14.17'}
+    requiresBuild: true
+    peerDependencies:
+      prisma: '*'
+    peerDependenciesMeta:
+      prisma:
+        optional: true
+    dependencies:
+      '@prisma/engines-version': 4.3.0-32.c875e43600dfe042452e0b868f7a48b817b9640b
+      prisma: 4.3.1
+    dev: false
+
+  /@prisma/engines-version/4.3.0-32.c875e43600dfe042452e0b868f7a48b817b9640b:
+    resolution: {integrity: sha512-8yWpXkQRmiSfsi2Wb/ZS5D3RFbeu/btL9Pm/gdF4phB0Lo5KGsDFMxFMgaD64mwED2nHc8ZaEJg/+4Jymb9Znw==}
+    dev: false
+
+  /@prisma/engines/4.3.1:
+    resolution: {integrity: sha512-4JF/uMaEDAPdcdZNOrnzE3BvrbGpjgV0FcPT3EVoi6I86fWkloqqxBt+KcK/+fIRR0Pxj66uGR9wVH8U1Y13JA==}
+    requiresBuild: true
+    dev: true
+
   /@rushstack/eslint-patch/1.2.0:
     resolution: {integrity: sha512-sXo/qW2/pAcmT43VoRKOJbDOfV3cYpq3szSVfIThQXNt+E4DfKj361vaAt3c88U5tPUxzEswam7GW48PJqtKAg==}
     dev: true
 
-  /@supabase/auth-helpers-nextjs/0.2.7:
-    resolution: {integrity: sha512-3+UMfE+wXBKswnzVL/hg1IYt3+POay+/B/Fn2hV8MaiffRpDdOG8zDSOIwsiNUz4KVZYOVa8IPvyh2AJqXwfMQ==}
+  /@supabase/auth-helpers-nextjs/0.2.8:
+    resolution: {integrity: sha512-lGHHKkIHxEoTj6b2MJOdUGOU7rD+S/X+S0WtEnD4HD6d/Ku19UjUrR7AExE0Fa+tbTDfY1BY0o0ELn/yLNeAYQ==}
     dependencies:
-      '@supabase/auth-helpers-shared': 0.1.3
+      '@supabase/auth-helpers-shared': 0.1.4
     dev: false
 
-  /@supabase/auth-helpers-react/0.2.3:
-    resolution: {integrity: sha512-r2XIajhZed4lvdoJ9sD/YNy/5b1Zturj2A9Ye2PcswBuuOkf1iAC+aAYPoSWllbgYpTC5hCHmcbG5yErcZyNmQ==}
+  /@supabase/auth-helpers-react/0.2.4:
+    resolution: {integrity: sha512-o/6VcnkCQnlPFBOVVlmk5w37fhlalDZKxPV9w5eYwgM4uzg1FwH6b70YNuOhA3EwCcy/S8e3pKVEsKAx/LjFcA==}
     dependencies:
-      '@supabase/auth-helpers-shared': 0.1.3
+      '@supabase/auth-helpers-shared': 0.1.4
     dev: false
 
-  /@supabase/auth-helpers-shared/0.1.3:
-    resolution: {integrity: sha512-Rwpa8LG21guoJ+CC/6bXObHjuhnNygV/9QqdNFA9a3pEJL6R/fGBxMaV3/6uEdnYIjY1V4CUpcqEzC1BC3mVfw==}
+  /@supabase/auth-helpers-shared/0.1.4:
+    resolution: {integrity: sha512-5jsy8pxrdFIBjcpGWihBb1gsiK2WMO8lKKnNlrZCgAzTdC/rZHVnYs7zK8yaLyoHidLfp6N5ZnocJUm7ZKSABQ==}
     dependencies:
       jose: 4.9.3
     dev: false
@@ -2135,6 +2162,15 @@ packages:
     resolution: {integrity: sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==}
     engines: {node: '>=10.13.0'}
     hasBin: true
+    dev: true
+
+  /prisma/4.3.1:
+    resolution: {integrity: sha512-90xo06wtqil76Xsi3mNpc4Js3SdDRR5g4qb9h+4VWY4Y8iImJY6xc3PX+C9xxTSt1lr0Q89A0MLkJjd8ax6KiQ==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+    requiresBuild: true
+    dependencies:
+      '@prisma/engines': 4.3.1
     dev: true
 
   /prop-types/15.8.1:

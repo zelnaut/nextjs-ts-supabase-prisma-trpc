@@ -1,0 +1,23 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model jobs {
+  id            String     @id @db.Uuid @default(dbgenerated("uuid_generate_v4()"))
+  title         String?
+  description   String?
+  type          String?
+  pay           Int?       @db.SmallInt
+  education     String?
+  experience    String?
+  location      String?
+  created_at    DateTime?  @db.Timestamp() @default(now())
+  created_by    String?
+  updated_at    DateTime?  @db.Timestamp() @default(now())
+  benefits      String?
+}

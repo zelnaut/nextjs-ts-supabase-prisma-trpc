@@ -17,11 +17,8 @@ const schema = yup
     email: yup.string().email().required('Please enter your email'),
     password: yup
       .string()
-      .required('Please enter your password')
-      .matches(
-        /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/,
-        'Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and one special case Character'
-      ),
+      .required('Please Enter your password')
+      .min(8, 'Must contain 8 characters'),
   })
   .required();
 
@@ -108,6 +105,7 @@ const RegisterForm = () => {
                 <span className="py-2 text-sm text-red-500">{errors.password?.message}</span>
               ) : null}
             </div>
+
             <button type="submit" className="btn mt-4 w-full">
               Register
             </button>

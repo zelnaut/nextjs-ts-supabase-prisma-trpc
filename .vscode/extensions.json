@@ -12,6 +12,7 @@
     "ms-vscode-remote.remote-containers",
 
     // Node
+    "Prisma.prisma",
     "ms-vscode.vscode-typescript-next",
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",

@@ -2,6 +2,7 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { Supabase } from 'utils/Supabase';
+import Link from 'next/link';
 
 type UserDataType = {
   email: string;
@@ -14,10 +15,7 @@ const schema = yup
     password: yup
       .string()
       .required('Please Enter your password')
-      .matches(
-        /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/,
-        'Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and one special case Character'
-      ),
+      .min(8, 'Must contain 8 characters'),
   })
   .required();
 
@@ -63,6 +61,12 @@ const LoginForm = () => {
                 Submit
               </button>
             </form>
+
+            <div className="mb-4 pt-4 text-center">
+              <Link href="/register">
+                <a>Register</a>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
